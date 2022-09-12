@@ -1,0 +1,7 @@
+	1. 뷰 인스턴스 생성하기
+		* 패키지: Vetur설치
+		* <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			> 최신 버전으로는 안됨.
+	
+		* Vue.js : 싱글 페이지 어플리케이션
+		
