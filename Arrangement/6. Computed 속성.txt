@@ -1,0 +1,2 @@
+	6. Computed 속성
+		* Computed 속성의 캐싱 vs 메소드
