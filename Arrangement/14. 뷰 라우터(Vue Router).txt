@@ -1,0 +1,4 @@
+	14. 뷰 라우터(Vue Router)
+	* Single Page Application인 이유
+		> Vue Router가 해주는 기능이다.
+		> 페이지는 바뀌지는 로딩을 다시 하는 것이 아니라. <router-view>에 컴포넌트만 바꾸는 것이다.
