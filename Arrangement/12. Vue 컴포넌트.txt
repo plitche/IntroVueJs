@@ -1,0 +1,7 @@
+	12. Vue 컴포넌트
+		- template 안에는 HTML이 들어간다.
+		- 인스턴스를 생성할때마다 원래 object(객체)를 생성하여 data, methods등을 처리하였으나,
+			재사용을 하는 컴포넌트에 object를 쓰게되면 reference 주소가 넘어가서 컴포넌트가 사용될 때마다
+			해당 주소에 있는 값이 다 변경되기 때문에 함수로 만들어 쓴다. data() {return ~~ }
+
+		- template의 html은 하나의 태그로 감싸 주고 그 안에 contents가 들어가야 한다.
