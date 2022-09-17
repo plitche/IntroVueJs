@@ -5,7 +5,7 @@
             type="text" 
             :value="name"
             style="padding: 30px; border: 2px solid green;"
-            @input="updateName"/>
+            @input="$emit('update-name', $event)"/>
     </div>
 </template>
 
@@ -17,11 +17,5 @@ export default {
             required: true
         }
     },
-    methods: {
-        updateName(e) {
-            // console.log(e.target.value);
-            this.$emit('update-name', e.target.value)
-        },
-    }
 }
 </script>

@@ -2,7 +2,7 @@
   <div>
     <h1>This is Home page</h1>
     <form action="">
-      <InputField :name="name" @update-name="updateName"/>
+      <InputField :name="name" @update-name="name = $event.target.value"/>
       <br/><button>Sumbit</button>
     </form>
     {{ name }}
@@ -19,11 +19,6 @@ export default {
   data() {
     return {
       name: ''
-    }
-  },
-  methods: {
-    updateName(name) {
-      this.name = name;
     }
   }
 }
