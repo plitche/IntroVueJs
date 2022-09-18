@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1>This is Home page</h1>
-    <form action="">
+    <!-- <form action=""> -->
       <InputField v-model="name"/>
-      <br/><button>Sumbit</button>
-    </form>
+      <br/><button @click="updateName">Sumbit</button>
+    <!-- </form> -->
     {{ name }}
   </div>
 </template>
@@ -18,7 +18,38 @@ export default {
   },
   data() {
     return {
-      name: ''
+      name: 'Kossie Coder'
+    }
+  },
+
+  beforeCreate() {
+    console.log('beforeCreate', this.name);
+  },
+  created() {
+    console.log('created', this.name);
+  },
+  beforeMount() {
+    alert('beforeMount');
+  },
+  mounted() {
+    alert('mounted');
+  },
+  beforeUpdate() {
+    alert('beforeUpdate');
+  },
+  updated() {
+    alert('updated');
+  },
+  beforeDestroy() {
+    alert('beforeDestroy');
+  },
+  destroyed() {
+    alert('destroyed');
+  },
+
+  methods: {
+    updateName() {
+      this.name = 'hello';
     }
   }
 }

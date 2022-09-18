@@ -1,0 +1,27 @@
+	19. 뷰 인스턴스 라이프라이클
+		1) new Vue()
+		2) Init(Events & Lifecycle)
+			- beforeCreate
+		3) Init(injections & reactivity)
+			- created
+		4) Has "el" option?
+		5) Has "template" option?
+			5-1) Compile template into
+			5-2) Complie el's outerHTML
+				- beforeMount
+		6) Create vm.$el and replace "el" with it
+			- mounted
+		7) Mounted
+			- when data changes (beforeUpdate)
+			7-1) Virtual DOM re-render and patch
+			- updated
+			
+			- beforeDestory
+		8) Teardown watchers, child components and event listeners
+			- destroyed
+		9) Destroyed
+		
+		
+		* created 부터 data에 접근이 가능
+		* DOM을 control하고 싶을 땐 mounted에서 하면 된다.
+		* 
