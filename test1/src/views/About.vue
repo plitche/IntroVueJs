@@ -2,8 +2,8 @@
   <div class="about">
     <h1>This is an about page</h1>
     <KossieCoder>
-      <template #header="props">
-        <p>header11 {{ props.kossie }}</p>
+      <template #header="{ kossie }">
+        <p>header11 {{ kossie }}</p>
       </template>
       <template v-slot:default>
         hello
