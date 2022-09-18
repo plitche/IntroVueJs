@@ -1,7 +1,14 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <KossieCoder />
+    <KossieCoder>
+      <template #header="props">
+        <p>header11 {{ props.kossie }}</p>
+      </template>
+      <template v-slot:default>
+        hello
+      </template>
+    </KossieCoder>
   </div>
 </template>
 
