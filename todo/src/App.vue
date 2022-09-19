@@ -12,7 +12,10 @@
     <Todo 
       v-for="todo in todos" 
       :key="todo.id"
-      :todo="todo" />
+      :todo="todo" 
+      @toggle-checkbox="toggleCheckbox"
+      @click-delete="clickDelete"
+      />
   </div>
 </template>
 
@@ -42,6 +45,19 @@ export default {
         checked: false
       })
       this.todoText = '';
+    },
+    toggleCheckbox({id, checked}) {
+      console.log(id, checked)
+      const index = this.todos.findIndex(todo => {
+        return todo.id === id;
+      });
+      this.todos[index].checked = checked;
+    },
+    clickDelete(id) {
+      const index = this.todos.findIndex(todo => {
+        return todo.id === id;
+      });
+      this.todos.splice(index, 1);
     }
   }
 }
